@@ -1,0 +1,249 @@
+@charset "UTF-8";
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Noto Sans JP", sans-serif;
+    color: #333;
+    background-color: #fff;
+    text-align: center; 
+    font-size: 16px; 
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+/* 共通のコンテナ（全体の横幅をここで管理） */
+.container {
+    max-width: 900px; 
+    margin: 0 auto;
+    padding: 0 20px;   
+}
+
+/* =================================header ================= */
+header {
+    padding: 20px 0;
+}
+
+.header-logo {
+    width: 200px;
+    margin: 0; 
+}
+
+.header-logo img {
+    display: block;
+}
+
+/* =================================fv (メインビジュアル) ================= */
+.fv {
+    width: 100%;
+    overflow: hidden;
+}
+
+.fv img {
+    width: 100%;
+    max-height: 520px;
+    object-fit: cover;
+}
+
+/* =================================スクロール矢印 ================= */
+.scroll-arrows {
+    margin: 25px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px; 
+}
+
+.scroll-arrows span {
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 10px solid #333; 
+}
+
+/* =================================Aboutセクション ================= */
+.About {
+    padding: 60px 0; /* 上下の余白を少しゆったりに */
+}
+
+.section-title {
+    text-align: left;           
+    border-bottom: 1px dashed #999; 
+    padding-bottom: 10px;       
+    margin-bottom: 30px;        
+}
+
+/* 写真と文章をまとめる箱 */
+.about-content {
+    display: flex;             
+    align-items: center;       
+    justify-content: flex-start; 
+    gap: 40px;                 
+}
+
+/* 写真のスタイル */
+.about-img {
+    width: 140px;  
+    height: 140px; 
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;            
+}
+
+.about-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-text h3 {
+    text-align: left;
+    font-size: 20px;
+    margin: 0 0 10px 0;
+}
+
+.about-text p {
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #666;
+}
+
+/* =================================Worksセクション ================= */
+.Works {
+    padding: 60px 0;
+}
+
+/* 画像とテキストの並びを調整するエリア */
+.Works .works-content {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    gap: 30px; 
+    flex-wrap: wrap; 
+    margin-top: 30px;
+}
+
+/* 各作品をまとめるパーツ */
+.Works .works-content > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%; 
+    min-width: 200px;
+}
+
+/* 作品画像全体の大きさ・レイアウト調整 */
+.Works .item-img {
+    display: block;            
+    position: relative;        
+    width: 100%;               
+    max-width: 220px;          
+    height: auto;              
+    margin: 0 auto;            
+    border-radius: 4px;        
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 画像自体の設定 */
+.Works .item-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.3s ease; 
+}
+
+/* ホバーしたときに暗くする設定 */
+.Works .item-img::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); 
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+}
+
+.Works .item-img:hover::after {
+    opacity: 1; 
+}
+
+.Works p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* ボタン全体を中央に配置する親要素 */
+.more-btn-wrap {
+    width: 100%;        
+    text-align: center; 
+    margin-top: 40px;   
+}
+
+/* 「and more...」ボタンのまとめ */
+.more-btn {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 50px;
+    border-radius: 4px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease; 
+}
+
+.more-btn:hover {
+    background-color: #555;       
+    transform: translateY(-2px);  
+    opacity: 0.9;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
+}
+
+/* =================================Contactセクション ================= */
+.Contact {
+    padding: 60px 0;
+}
+
+.contact-link {
+  color: inherit; 
+  text-decoration: underline;
+}
+
+.contact-link:hover {
+  opacity: 0.7; 
+}
+
+/* =================================Footer ================= */
+footer {
+    background-color: #000000; 
+    color: #ffffff;            
+    text-align: center;        
+    padding: 60px 20px;        
+    margin-top: 80px;          
+}
+
+footer img {
+    max-width: 150px;          
+    height: auto;
+    margin-bottom: 20px;       
+}
+
+footer p {
+    font-size: 12px;
+    letter-spacing: 1px;       
+    color: #cccccc;            
+}
